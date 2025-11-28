@@ -52,9 +52,12 @@ let team = [
 const card = document.getElementById("container-card");
 
 for (let i = 0; i < team.length; i++) {
-    let member = document.createElement("img");
-    for (let key in team[i]) {
-        member.src = `./img/${team[i].foto}`
-    }
-    card.appendChild(member);
+    card.innerHTML += `<div class="card" style="width: 18rem">
+        <img src="./img/${team[i].foto}" class="card-img-top">
+        <div class="card-body">
+        <p class="card-text">
+        ${team[i].nome}
+        </p>
+        </div>
+        </div>`
 }
