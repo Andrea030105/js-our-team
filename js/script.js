@@ -45,3 +45,16 @@ for (let i = 0; i < team.length; i++) {
         console.log(team[i][key])
     }
 }
+
+/* Stampo le stesse informazioni nel DOM sottoforma di stringhe.
+ */
+
+const card = document.getElementById("container-card");
+
+for (let i = 0; i < team.length; i++) {
+    for (let key in team[i]) {
+        let member = document.createElement("h1");
+        member.innerHTML = `${team[i][key]}`
+        card.appendChild(member);
+    }
+}

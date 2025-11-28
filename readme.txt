@@ -7,7 +7,7 @@ MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto.
 
 MILESTONE 2:
-Stampare le stesse informazioninel DOM sottoforma di stringhe.
+Stampare le stesse informazioni nel DOM sottoforma di stringhe.
 
 BONUS 1:
 Trasformare la stringa foto in una immagine effettiva.
