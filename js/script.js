@@ -1,16 +1,16 @@
-/* creo l'array di oggetti con le informazioni fornite. */
+/* Creo l'array di oggetti con le informazioni fornite. */
 
 let team = [
     {
         nome: "Wayne Barnett",
         ruolo: "Founder & CEO",
-        foto: "wayne-barnett-faunder-ceo.jpg",
+        foto: "wayne-barnett-founder-ceo.jpg",
     },
 
     {
         nome: "Angela Caroll",
         ruolo: "Chief Editor",
-        foto: "angela-caroll-cheif-editor.jpg",
+        foto: "angela-caroll-chief-editor.jpg",
     },
 
     {
@@ -40,11 +40,11 @@ let team = [
 
 /* Stampo su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto. */
 
-for (let i = 0; i < team.length; i++) {
+/* for (let i = 0; i < team.length; i++) {
     for (let key in team[i]) {
         console.log(team[i][key])
     }
-}
+} */
 
 /* Stampo le stesse informazioni nel DOM sottoforma di stringhe.
  */
@@ -52,9 +52,9 @@ for (let i = 0; i < team.length; i++) {
 const card = document.getElementById("container-card");
 
 for (let i = 0; i < team.length; i++) {
+    let member = document.createElement("img");
     for (let key in team[i]) {
-        let member = document.createElement("h1");
-        member.innerHTML = `${team[i][key]}`
-        card.appendChild(member);
+        member.src = `./img/${team[i].foto}`
     }
+    card.appendChild(member);
 }
